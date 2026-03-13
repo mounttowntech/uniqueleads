@@ -2,7 +2,7 @@ import "./HeroSection.css";
 
 function HeroSection() {
   return (
-    <div className="hero">
+    <div className="hero-data">
       <div className="hero-container">
         
         <div className="hero-image">
