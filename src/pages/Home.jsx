@@ -5,6 +5,7 @@ import HeroSection from '../components/HeroSection';
 import ComprehensiveSection from '../components/ComprehensiveSection';
 import ReliableSection from '../components/ReliableSection';
 import IndustrySection from '../components/IndustrySection';
+import HowItWorks from '../components/HowItsWorks';
 
 function Home() {
 
@@ -175,6 +176,7 @@ function Home() {
         <ComprehensiveSection/>
         <ReliableSection/>
         <IndustrySection/>
+        <HowItWorks/>
         </>
     );
 }
