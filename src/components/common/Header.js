@@ -6,7 +6,7 @@ function Header() {
 <header class="main-header">
   <div class="header-container">
 
-    <div class="logo">LOGO</div>
+    <div class="logo"> UNIQU LEADS</div>
 
     <nav class="nav-links">
       <a href="#Home">Home</a>
