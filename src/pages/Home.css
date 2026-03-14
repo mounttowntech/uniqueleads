@@ -33,11 +33,11 @@
   font-size: 48px;
   margin-bottom: 20px;
 }
-
 .hero-center h1 span {
   background: linear-gradient(90deg, #4da3ff, #1f4bff);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-center p {
@@ -79,6 +79,7 @@
 
 .grad-text {
   background: linear-gradient(90deg, #4da3ff, #1f4bff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 34px;

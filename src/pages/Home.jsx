@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './Home.css';
 // import "../components/HeroSection.css";
 import HeroSection from '../components/HeroSection';
+import ComprehensiveSection from '../components/ComprehensiveSection';
 
 function Home() {
 
@@ -169,6 +170,7 @@ function Home() {
 
         </section>
         <HeroSection />
+        <ComprehensiveSection/>
         </>
     );
 }
