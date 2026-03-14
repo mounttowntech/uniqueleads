@@ -11,7 +11,18 @@ function ComprehensiveSection() {
     <div className="grids">
       <div className="grid1">
         <div className="grid1-1">
-          <img src="images/laptop1.png" alt="Laptop 1"/>
+                  <div className="image-card">
+                    <img src="images/laptop1.png" alt="Laptop 1"/>
+                    <div className="image-overlay">
+                      <div className="icon-box">
+                        <img src="icons/database-icon.png" alt="database icon" />
+                      </div>  
+                      <div>
+                        <h2>Data Selling</h2>
+                        <p>High-Quality Business & Consumer Data</p>
+                      </div>
+                    </div>
+                  </div>
           <p className="image-para">We provide verified and well-structured data that helps
              businesses connect with potential customers quickly
               and effectively. Our data solutions support targeted
@@ -31,7 +42,18 @@ function ComprehensiveSection() {
       </div>
       <div className="grid2">
         <div className="grid2-2">
-          <img src="images/laptop2.png" alt="Laptop 2"/>
+          <div className="image-card">
+                    <img src="images/laptop2.png" alt="Laptop 1"/>
+                    <div className="image-overlay">
+                      <div className="icon-box">
+                        <img src="icons/database-icon.png" alt="database icon" />
+                      </div>                      
+                      <div>
+                        <h2>Survey Distribution</h2>
+                        <p>Professional Market Research Surveys</p>
+                      </div>
+                    </div>
+                  </div>
           <p className="image-para">Understanding your audience is essential for business success, 
             and Unique Leads offers professional survey distribution services 
             that enable businesses to 

@@ -17,6 +17,7 @@
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
   border-radius: 18px;
+  color: white;
   padding: 20px;
 }
 
@@ -32,12 +33,14 @@
 .hero-center h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  color: white;
 }
+
 .hero-center h1 span {
   background: linear-gradient(90deg, #4da3ff, #1f4bff);
-  background-clip: text;
+  background-clip:text ;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-center p {
@@ -79,7 +82,7 @@
 
 .grad-text {
   background: linear-gradient(90deg, #4da3ff, #1f4bff);
-  background-clip: text;
+  background-clip:text ;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 34px;

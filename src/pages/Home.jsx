@@ -3,6 +3,7 @@ import './Home.css';
 // import "../components/HeroSection.css";
 import HeroSection from '../components/HeroSection';
 import ComprehensiveSection from '../components/ComprehensiveSection';
+import ReliableSection from '../components/ReliableSection';
 
 function Home() {
 
@@ -171,6 +172,8 @@ function Home() {
         </section>
         <HeroSection />
         <ComprehensiveSection/>
+        <ReliableSection/>
+        
         </>
     );
 }
