@@ -4,6 +4,7 @@ import './Home.css';
 import HeroSection from '../components/HeroSection';
 import ComprehensiveSection from '../components/ComprehensiveSection';
 import ReliableSection from '../components/ReliableSection';
+import IndustrySection from '../components/IndustrySection';
 
 function Home() {
 
@@ -173,7 +174,7 @@ function Home() {
         <HeroSection />
         <ComprehensiveSection/>
         <ReliableSection/>
-        
+        <IndustrySection/>
         </>
     );
 }
