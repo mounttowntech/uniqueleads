@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './Home.css';
 // import "../components/HeroSection.css";
 import HeroSection from '../components/HeroSection';
@@ -8,11 +8,36 @@ import IndustrySection from '../components/IndustrySection';
 import HowItWorks from '../components/HowItsWorks';
 import Contact from '../components/Contact';
 import StartGrowing from '../components/StartGrowing';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+    let heroRef = useRef(null);
+    let servicesRef = useRef(null);
+    let aboutRef = useRef(null);
+    let contactRef = useRef(null);
+
+    let location = useLocation();
+
+    const scrollMap = {
+        home: heroRef,
+        services: servicesRef,
+        about: aboutRef,
+        contact: contactRef
+     };
+
+    const scrollTo = (key) => {
+        scrollMap[key]?.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
  
     useEffect(() => {
     const counters = document.querySelectorAll(".counter");
+
+    if (location.state?.scrollTo) {
+      setTimeout(() => scrollTo(location.state.scrollTo), 100);
+    }
 
     counters.forEach(counter => {
       const target = +counter.getAttribute("data-target");
@@ -42,11 +67,18 @@ function Home() {
       updateCount();
     });
 
-  }, []); // 👈 run once when component loads
+  }, [location]); // 👈 run once when component loads
+
+  // Scroll when already on home
+  useEffect(() => {
+    const handler = (e) => scrollTo(e.detail);
+    window.addEventListener("scroll-to-section", handler);
+    return () => window.removeEventListener("scroll-to-section", handler);
+  }, []);
 
     return (
         <>
-        <section class="hero">
+        <section class="hero" ref={heroRef}>
 
             {/* LEFT CARD */}
             <div class="glass-card left-card">
@@ -161,13 +193,13 @@ function Home() {
             </div>
 
         </section>
-        <HeroSection />
-        <ComprehensiveSection/>
-        <ReliableSection/>
-        <IndustrySection/>
-        <HowItWorks/>
+        <HeroSection ref={aboutRef}/>
+        <ComprehensiveSection ref={servicesRef}/>
+        <ReliableSection />
+        <IndustrySection />
+        <HowItWorks />
         <StartGrowing/>
-        <Contact />
+        <Contact ref={contactRef}/>
         </>
     );
 }

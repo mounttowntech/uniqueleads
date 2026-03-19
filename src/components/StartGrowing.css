@@ -1,12 +1,12 @@
 .cta-section {
   width: 100%;
-  min-height: 320px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #0a3cff, #001f6b);
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .cta-content {

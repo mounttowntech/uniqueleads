@@ -1,6 +1,19 @@
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToSection = (section) => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: section } });
+    }else {
+      window.dispatchEvent(new CustomEvent('scroll-to-section', { detail: section }));
+    }
+  };
+
+
   return (
     /* Header Component */
 <header class="main-header">
@@ -9,10 +22,10 @@ function Header() {
     <div class="logo"> UNIQU LEADS</div>
 
     <nav class="nav-links">
-      <a href="#Home">Home</a>
-      <a href="#Services">Services</a>
-      <a href="#About">About Us</a>
-      <a href="#Contact">Contact Us</a>
+      <Link to="/" onClick={() => goToSection('home')}>Home</Link>
+      <Link to="/" onClick={() => goToSection('services')}>Services</Link>
+      <Link to="/" onClick={() => goToSection('about')}>About Us</Link>
+      <Link to="/" onClick={() => goToSection('contact')}>Contact Us</Link>
     </nav>
     
     <div class="header-buttons">

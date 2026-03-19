@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import "./ComprehensiveSection.css";
 
 const cards = [
@@ -37,9 +38,9 @@ const cards = [
   },
 ];
 
-function ComprehensiveSection() {
+const ComprehensiveSection = forwardRef((props, ref) => {
   return (
-    <div className="Comprehensive">
+    <section className="Comprehensive" ref={ref}>
       <div className="Comprehensive-heading">
         <h3>Comprehensive Data Solutions</h3>
         <p>Everything you need to identify, reach and understand your target audience</p>
@@ -73,8 +74,8 @@ function ComprehensiveSection() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default ComprehensiveSection;

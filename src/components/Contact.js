@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import "./Contact.css";
 
-export default function Contact() {
+const Contact = forwardRef((props, ref) => {
   return (
-      <section class="contact-section">
+      <section class="contact-section" ref={ref}>
           <div class="contact-card">
 
               {/* LEFT CONTENT */}
@@ -67,4 +68,6 @@ export default function Contact() {
           </div>
       </section>
   );
-}
+});
+
+export default Contact;

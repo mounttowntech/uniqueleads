@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
+
+section {
+  scroll-margin-top: 50px; /* header height + extra space */
+}

@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import "./HeroSection.css";
 
-function HeroSection() {
+const HeroSection = forwardRef((props, ref) => {
   return (
-    <div className="hero-data">
+    <section className="hero-data" ref={ref}>
       <div className="hero-container">
         
         <div className="hero-image">
@@ -49,8 +50,8 @@ function HeroSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+});
 
 export default HeroSection;
