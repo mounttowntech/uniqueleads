@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import './Home.css';
 // import "../components/HeroSection.css";
 import HeroSection from '../components/HeroSection';
@@ -18,19 +18,19 @@ function Home() {
 
     let location = useLocation();
 
-    const scrollMap = {
+    const scrollMap = useMemo(() => ({
         home: heroRef,
         services: servicesRef,
         about: aboutRef,
         contact: contactRef
-     };
+    }), []);
 
-    const scrollTo = (key) => {
+    const scrollTo = useCallback((key) => {
         scrollMap[key]?.current?.scrollIntoView({
             behavior: "smooth",
             block: "start",
         });
-    };
+    }, [scrollMap]);
  
     useEffect(() => {
     const counters = document.querySelectorAll(".counter");
@@ -67,14 +67,14 @@ function Home() {
       updateCount();
     });
 
-  }, [location]); // 👈 run once when component loads
+  }, [location, scrollTo]); // run once when component loads
 
   // Scroll when already on home
   useEffect(() => {
     const handler = (e) => scrollTo(e.detail);
     window.addEventListener("scroll-to-section", handler);
     return () => window.removeEventListener("scroll-to-section", handler);
-  }, []);
+  }, [scrollTo]);
 
     return (
         <>
