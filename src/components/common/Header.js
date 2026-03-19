@@ -1,9 +1,11 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
+import { useState } from "react";
 
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
+const [menuOpen, setMenuOpen] = useState(false);
 
   const goToSection = (section) => {
     if (location.pathname !== '/') {
@@ -16,19 +18,49 @@ function Header() {
 
   return (
     /* Header Component */
-<header class="main-header">
-  <div class="header-container">
+<header className="main-header">
+  <div className="header-container">
 
-    <div class="logo"> UNIQU LEADS</div>
+    <div className="logo"> UNIQU LEADS</div>
+<div 
+  className={`hamburger ${menuOpen ? "active" : ""}`} 
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+    <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+      <Link to="/" onClick={() => {
+  goToSection('home');
+  setMenuOpen(false);
+}}>
+  Home
+</Link>
 
-    <nav class="nav-links">
-      <Link to="/" onClick={() => goToSection('home')}>Home</Link>
-      <Link to="/" onClick={() => goToSection('services')}>Services</Link>
-      <Link to="/" onClick={() => goToSection('about')}>About Us</Link>
-      <Link to="/" onClick={() => goToSection('contact')}>Contact Us</Link>
-    </nav>
+<Link to="/" onClick={() => {
+  goToSection('services');
+  setMenuOpen(false);
+}}>
+  Services
+</Link>
+
+<Link to="/" onClick={() => {
+  goToSection('about');
+  setMenuOpen(false);
+}}>
+  About Us
+</Link>
+
+<Link to="/" onClick={() => {
+  goToSection('contact');
+  setMenuOpen(false);
+}}>
+  Contact Us
+</Link>
+      </nav>
     
-    <div class="header-buttons">
+    <div className="header-buttons">
       <button class="btn-outline">Get Demo</button>
       <button class="btn-primary">Get Started</button>
     </div>
