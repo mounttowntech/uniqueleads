@@ -6,6 +6,8 @@ import ComprehensiveSection from '../components/ComprehensiveSection';
 import ReliableSection from '../components/ReliableSection';
 import IndustrySection from '../components/IndustrySection';
 import HowItWorks from '../components/HowItsWorks';
+import Contact from '../components/Contact';
+import StartGrowing from '../components/StartGrowing';
 
 function Home() {
 
@@ -177,6 +179,8 @@ function Home() {
         <ReliableSection/>
         <IndustrySection/>
         <HowItWorks/>
+        <StartGrowing/>
+        <Contact />
         </>
     );
 }
