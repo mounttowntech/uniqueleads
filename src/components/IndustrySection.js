@@ -1,15 +1,7 @@
 import "./IndustrySection.css";
 
-const industries = [
-  "Technology",
-  "Real Estate",
-  "Finance",
-  "Healthcare",
-  "Education",
-  "Startups",
-  "Marketing Agencies",
-  "E-commerce",
-];
+const row2 = ["Technology", "Real Estate", "Finance", "Healthcare"];
+const row1 = ["Education", "Startups", "Marketing Agencies", "E-commerce"];
 
 export default function IndustrySection() {
   return (
@@ -24,11 +16,21 @@ export default function IndustrySection() {
         </p>
 
         <div className="industry-grid">
-          {industries.map((industry, index) => (
-            <button key={index} className="industry-btn">
-              {industry}
-            </button>
-          ))}
+          <div className="industry-row">
+            {row1.map((label) => (
+              <button key={label} className="industry-btn">
+                {label}
+              </button>
+            ))}
+          </div>
+
+          <div className="industry-row">
+            {row2.map((label) => (
+              <button key={label} className="industry-btn">
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

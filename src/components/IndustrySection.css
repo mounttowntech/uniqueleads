@@ -1,5 +1,5 @@
 .industries {
-  background: #f3f4f6;
+  background: #e8eaf2;
   padding: 80px 20px;
   text-align: center;
 }
@@ -9,7 +9,7 @@
   margin: auto;
 }
 
-h2 {
+.industries h2 {
   font-size: 36px;
   font-weight: 700;
   color: #0b1b44;
@@ -19,32 +19,42 @@ h2 {
   margin-top: 15px;
   color: #555;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .industry-grid {
-  margin-top: 40px;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.industry-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
 }
 
 .industry-btn {
-  background: #1f4bff;
-  color: white;
+  background: #2145f5;
+  color: #fff;
   border: none;
-  padding: 12px 26px;
-  border-radius: 30px;
+  padding: 13px 30px;
+  white-space: nowrap;
+  border-radius: 999px;
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
 }
 
 .industry-btn:hover {
-  background: #1e46d8;
+  background: #1a38d4;
   transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(33, 69, 245, 0.42);
 }
