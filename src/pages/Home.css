@@ -271,20 +271,230 @@
   font-size: 18px;
   font-weight: 600;
 }
+/* ═══════════════════════════════════════════
+   MOBILE RESPONSIVE — hero section
+   Paste at the bottom of your hero CSS file
+═══════════════════════════════════════════ */
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
+/* ── TABLET (≤ 1024px) ── */
+@media (max-width: 1024px) {
   .hero {
-    grid-template-columns: 1fr;
-    padding: 100px 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 100px 28px 50px;
+    gap: 20px;
   }
 
+  /* Center spans full width */
+  .hero-center {
+    margin-top: 50px;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    order: -1;
+  }
+
+  .hero-center h1 {
+    font-size: 38px;
+  }
+
+  /* Left and right cards sit in the row below */
+  .left-card {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .right-card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Analytics goes full width at bottom */
   .analytics-card {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-top: 0;
+  }
+}
+
+/* ── MOBILE (≤ 768px) ── */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 90px 18px 48px;
+    gap: 18px;
+  }
+
+  /* Stack order: center → left → right → analytics */
+  .hero-center  { order: 1; }
+  .left-card    { order: 2; grid-column: auto; grid-row: auto; }
+  .right-card   { order: 3; grid-column: auto; grid-row: auto; }
+  .analytics-card {
+    order: 4;
     grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+  }
+
+  .hero-center h1 {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .hero-center p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  /* Buttons stack nicely */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+  }
+
+  .btn-primary,
+  .btn-light {
+    width: 100%;
+    max-width: 280px;
+    padding: 13px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.grad-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #4da3ff, #1f4bff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats > div p {
+  font-size: 13px;
+  color: #ccc;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+  /* Dot items */
+  .dot {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  /* Glass cards */
+  .glass-card {
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  /* Analytics bottom grid: 3 cols → 2 cols */
+  .analytics-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Progress bars */
+  .progress-item {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .survey-item {
+    font-size: 13px;
+  }
+}
+
+/* ── SMALL MOBILE (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 14px 40px;
+    gap: 14px;
+  }
+
+  .hero-center h1 {
+    font-size: 26px;
+  }
+
+  .hero-center p {
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+  .btn-primary,
+  .btn-light {
+    max-width: 100%;
+  }
+
+  .grad-text {
+    font-size: 22px;
   }
 
   .stats {
+    gap: 14px 20px;
+  }
+
+  /* Bottom analytics: single column */
+  .analytics-bottom {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .bottom-box {
+    padding: 10px 4px;
+  }
+
+  .bottom-box p {
+    font-size: 11px;
+  }
+
+  .blue-text,
+  .purple-text,
+  .pink-text {
+    font-size: 15px;
+  }
+
+  .analytics-header {
     flex-direction: column;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 6px;
   }
 }
+
+/* ── EXTRA SMALL (≤ 360px) ── */
+@media (max-width: 360px) {
+  .hero-center h1 {
+    font-size: 22px;
+  }
+
+  .glass-card {
+    padding: 14px 12px;
+  }
+
+  .grad-text {
+    font-size: 20px;
+  }
+}
+
+
+

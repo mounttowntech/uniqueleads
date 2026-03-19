@@ -10,7 +10,7 @@ import Contact from '../components/Contact';
 import StartGrowing from '../components/StartGrowing';
 
 function Home() {
-
+ 
     useEffect(() => {
     const counters = document.querySelectorAll(".counter");
 
@@ -86,20 +86,7 @@ function Home() {
                     <button class="btn-light">Start Survey Campaign</button>
                 </div>
 
-                {/* <div class="stats">
-      <div>
-        <h2 class="grad-text">50</h2>
-        <p>Verified Leads</p>
-      </div>
-      <div>
-        <h2 class="grad-text">98%</h2>
-        <p>Data Accuracy</p>
-      </div>
-      <div>
-        <h2 class="grad-text">2K+</h2>
-        <p>Happy Clients</p>
-      </div>
-    </div> */}
+               
                 <div class="stats">
                     <div>
                         <h2 class="grad-text counter" data-target="50">0</h2>

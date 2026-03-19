@@ -58,3 +58,82 @@
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(33, 69, 245, 0.42);
 }
+
+/* ═══════════════════════════════════════
+   MOBILE RESPONSIVE — industries section
+═══════════════════════════════════════ */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .industries {
+    padding: 60px 16px;
+  }
+
+  .industries h2 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    max-width: 100%;
+    margin-top: 12px;
+  }
+
+  .industry-grid {
+    margin-top: 36px;
+    gap: 16px;
+  }
+
+  .industry-row {
+    gap: 14px;
+  }
+
+  .industry-btn {
+    padding: 11px 24px;
+    font-size: 13.5px;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .industries {
+    padding: 48px 14px;
+  }
+
+  .industries h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 13.5px;
+    line-height: 1.65;
+    margin-top: 10px;
+  }
+
+  .industry-grid {
+    margin-top: 28px;
+    gap: 12px;
+  }
+
+  .industry-row {
+    gap: 10px;
+  }
+
+  .industry-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Small mobile (≤ 360px) */
+@media (max-width: 360px) {
+  .industries h2 {
+    font-size: 21px;
+  }
+
+  .industry-btn {
+    padding: 9px 16px;
+    font-size: 12.5px;
+  }
+}
