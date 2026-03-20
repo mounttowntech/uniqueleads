@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background with animation */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #2B5BFF, #0D1B3E, #4facfe, #149197);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism card */
+.login-box {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 35px 30px;
+  border-radius: 15px;
+  width: 340px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  animation: fadeIn 1s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Input group */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  display: block;
+  color: white;
+}
+
+/* Input fields */
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: 0.3s;
+}
+
+/* Placeholder */
+.input-group input::placeholder {
+  color: white;
+}
+
+/* Focus effect */
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px #2B5BFF;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #2B5BFF, #497fad);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+}
+
+/* Button hover */
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 91, 255, 0.5);
+}
+
+/* Signup text */
+.signup-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: white;
+}
+
+.signup-text span {
+  color: #4facfe;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.signup-text span:hover {
+  text-decoration: underline;
+  color: #fff;
+}
