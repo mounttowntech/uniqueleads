@@ -1,6 +1,7 @@
 import { forwardRef, useState } from "react";
 import "./Contact.css";
 import { contactService } from "../services/contactService";
+import { validators } from "../utils/validators";
 
 const Contact = forwardRef((props, ref) => {
     const [formData, setFormData] = useState({
@@ -17,14 +18,24 @@ const Contact = forwardRef((props, ref) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // Validate input based on field name
+        if (validators?.[name] && !validators[name](value)) {
+            // setErrors(`Invalid ${name} format.`);
+            return;
+        }
         setFormData((prevData) => ({
             ...prevData,
             [name]: value
         }));
+
+        // remove error while typing
+        // setErrors({ ...errors, [name]: "" });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        let newErrors = {};
         setErrors('');
         setSuccess('');
         // Handle form submission logic here
@@ -33,6 +44,20 @@ const Contact = forwardRef((props, ref) => {
             setErrors('Please fill in all required fields.');
             return;
         }
+        // Object.keys(formData).forEach((key) => {
+        //     if (!formData[key]) {
+        //         newErrors[key] = 'This field is required.';
+        //     }
+        // });
+
+        if(formData.phone.length > 10) {
+            newErrors.phone = 'Contact number cannot exceed 10 digits.';
+        }
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
+
         try {
             const response = await contactService.createContact(formData);
             console.log('successres:', response);
@@ -85,10 +110,12 @@ const Contact = forwardRef((props, ref) => {
                       <div>
                           <label>Name</label>
                           <input type="text" name="name" value={formData.name} onChange={handleChange} />
+                          {/* {errors.name && <span>{errors.name}</span>} */}
                       </div>
                       <div>
                           <label>Company</label>
                           <input type="text" name="company" value={formData.company} onChange={handleChange} />
+                          {/* {errors.company && <span>{errors.company}</span>} */}
                       </div>
                   </div>
 
@@ -96,21 +123,26 @@ const Contact = forwardRef((props, ref) => {
                       <div>
                           <label>Email</label>
                           <input type="email" name="email" value={formData.email} onChange={handleChange} />
+                            {/* {errors.email && <span>{errors.email}</span>} */}
                       </div>
                       <div>
                           <label>Contact</label>
-                          <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
+                          <input type="text" name="phone" value={formData.phone} onChange={handleChange} inputMode="numeric"/>
+                          {/* {errors.phone && <span>{errors.phone}</span>} */}
                       </div>
                   </div>
 
                   <div>
                       <label>Service Interest</label>
                       <input type="text" name="service" value={formData.service} onChange={handleChange} />
+                      {/* {errors.service && <span>{errors.service}</span>} */}
+
                   </div>
 
                   <div>
                       <label>Message</label>
                       <textarea name="message" rows="4" value={formData.message} onChange={handleChange}></textarea>
+                        {/* {errors.message && <span>{errors.message}</span>} */}
                   </div>
 
                   <button type="submit">
