@@ -78,11 +78,11 @@ const Contact = forwardRef((props, ref) => {
     };
 
     return (
-        <section class="contact-section" ref={ref}>
-            <div class="contact-card">
+        <section className="contact-section" ref={ref}>
+            <div className="contact-card">
 
               {/* LEFT CONTENT */}
-              <div class="contact-info">
+              <div className="contact-info">
                   <h2>Let's Build Your Data Strategy</h2>
                   <p>
                       Ready to access premium leads and market insights?
@@ -90,23 +90,23 @@ const Contact = forwardRef((props, ref) => {
                       right solution for your business.
                   </p>
 
-                  <div class="info-item">
-                      <span class="icon">✉</span>
+                  <div className="info-item">
+                      <span className="icon">✉</span>
                       <span>hello@uniqueleads.com</span>
                   </div>
 
-                  <div class="info-item">
-                      <span class="icon">☎</span>
+                  <div className="info-item">
+                      <span className="icon">☎</span>
                       <span>+1 (888) 123-4567</span>
                   </div>
               </div>
 
               {/* RIGHT FORM */}
-              <form class="contact-form" onSubmit={handleSubmit}>
-                    {errors && <div class="error-message">{errors}</div>}
-                    {success && <div class="success-message">{success}</div>}
+              <form className="contact-form" onSubmit={handleSubmit}>
+                    {errors && <div className="error-message">{errors}</div>}
+                    {success && <div className="success-message">{success}</div>}
 
-                  <div class="form-row">
+                  <div className="form-row">
                       <div>
                           <label>Name</label>
                           <input type="text" name="name" value={formData.name} onChange={handleChange} />
@@ -119,7 +119,7 @@ const Contact = forwardRef((props, ref) => {
                       </div>
                   </div>
 
-                  <div class="form-row">
+                  <div className="form-row">
                       <div>
                           <label>Email</label>
                           <input type="email" name="email" value={formData.email} onChange={handleChange} />
@@ -146,7 +146,7 @@ const Contact = forwardRef((props, ref) => {
                   </div>
 
                   <button type="submit">
-                    <i class="fa-solid fa-paper-plane"></i> Send Request
+                    <i className="fa-solid fa-paper-plane"></i> Send Request
                   </button>
               </form>
 

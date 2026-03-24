@@ -78,34 +78,34 @@ function Home() {
 
     return (
         <>
-        <section class="hero" ref={heroRef}>
+        <section className="hero" ref={heroRef}>
 
             {/* LEFT CARD */}
-            <div class="glass-card left-card">
+            <div className="glass-card left-card">
                 <h4>Survey Results</h4>
                 <small>Market Research</small>
 
-                <div class="survey-item">
-                    <span class="circle blue"></span>
-                    <span class="label">Satisfied</span>
-                    <span class="value">72%</span>
+                <div className="survey-item">
+                    <span className="circle blue"></span>
+                    <span className="label">Satisfied</span>
+                    <span className="value">72%</span>
                 </div>
 
-                <div class="survey-item">
-                    <span class="circle purple"></span>
-                    <span class="label">Neutral</span>
-                    <span class="value">18%</span>
+                <div className="survey-item">
+                    <span className="circle purple"></span>
+                    <span className="label">Neutral</span>
+                    <span className="value">18%</span>
                 </div>
 
-                <div class="survey-item">
-                    <span class="circle pink"></span>
-                    <span class="label">Unsatisfied</span>
-                    <span class="value">10%</span>
+                <div className="survey-item">
+                    <span className="circle pink"></span>
+                    <span className="label">Unsatisfied</span>
+                    <span className="value">10%</span>
                 </div>
             </div>
 
             {/* CENTER CONTENT */}
-            <div class="hero-center">
+            <div className="hero-center">
                 <h1>Turn Data Into<br /><span>Business Opportunities</span></h1>
 
                 <p>
@@ -113,80 +113,80 @@ function Home() {
                     connect you with the right audience, the right data, and the right opportunities to expand your business faster.
                 </p>
 
-                <div class="hero-buttons">
-                    <button class="btn-primary">Get Data Leads</button>
-                    <button class="btn-light">Start Survey Campaign</button>
+                <div className="hero-buttons">
+                    <button className="btn-primary">Get Data Leads</button>
+                    <button className="btn-light">Start Survey Campaign</button>
                 </div>
 
                
-                <div class="stats">
+                <div className="stats">
                     <div>
-                        <h2 class="grad-text counter" data-target="50">0</h2>
+                        <h2 className="grad-text counter" data-target="50">0</h2>
                         <p>Verified Leads</p>
                     </div>
 
                     <div>
-                        <h2 class="grad-text counter" data-target="98" data-suffix="%">0%</h2>
+                        <h2 className="grad-text counter" data-target="98" data-suffix="%">0%</h2>
                         <p>Data Accuracy</p>
                     </div>
 
                     <div>
-                        <h2 class="grad-text counter" data-target="2000" data-format="k">0</h2>
+                        <h2 className="grad-text counter" data-target="2000" data-format="k">0</h2>
                         <p>Happy Clients</p>
                     </div>
                 </div>
             </div>
 
             {/* RIGHT CARD */}
-            <div class="glass-card right-card">
+            <div className="glass-card right-card">
                 <h4>New Lead Batch</h4>
                 <small>5,240 Verified Contacts</small>
             </div>
 
             {/* BOTTOM ANALYTICS */}
-            <div class="glass-card analytics-card">
-                <div class="analytics-header">
+            <div className="glass-card analytics-card">
+                <div className="analytics-header">
                     <h4>Lead Analytics</h4>
-                    <span class="green">+24.6%</span>
+                    <span className="green">+24.6%</span>
                 </div>
 
-                <div class="progress-item">
-                    <div class="progress-top">
+                <div className="progress-item">
+                    <div className="progress-top">
                         <span>B2B Leads</span>
-                        <span class="percent">78%</span>
+                        <span className="percent">78%</span>
                     </div>
 
-                    <div class="progress"><div class="bar blue" style={{ width: '78%' }}></div></div>
+                    <div className="progress"><div className="bar blue" style={{ width: '78%' }}></div></div>
                 </div>
 
-                <div class="progress-item">
-                    <div class="progress-top">
+                <div className="progress-item">
+                    <div className="progress-top">
                         <span>B2C Leads</span>
-                        <span class="percent">65%</span>
+                        <span className="percent">65%</span>
                     </div>
-                    <div class="progress"><div class="bar purple" style={{ width: '65%' }}></div></div>
+                    <div className="progress"><div className="bar purple" style={{ width: '65%' }}></div></div>
                 </div>
 
-                <div class="progress-item">
-                    <div class="progress-top">
+                <div className="progress-item">
+                    <div className="progress-top">
                         <span>Survey Responses</span>
-                        <span class="percent">91%</span>
+                        <span className="percent">91%</span>
                     </div>
-                    <div class="progress"><div class="bar pink" style={{ width: '91%' }}></div></div>
+                    <div className="progress"><div className="bar pink" style={{ width: '91%' }}></div></div>
                 </div>
 
                 {/* BOTTOM BOXES (EXACT LIKE IMAGE)  */}
-                <div class="analytics-bottom">
-                    <div class="bottom-box">
-                        <h3 class="blue-text">12K</h3>
+                <div className="analytics-bottom">
+                    <div className="bottom-box">
+                        <h3 className="blue-text">12K</h3>
                         <p>New</p>
                     </div>
-                    <div class="bottom-box">
-                        <h3 class="purple-text">8.4K</h3>
+                    <div className="bottom-box">
+                        <h3 className="purple-text">8.4K</h3>
                         <p>Active</p>
                     </div>
-                    <div class="bottom-box">
-                        <h3 class="pink-text">99%</h3>
+                    <div className="bottom-box">
+                        <h3 className="pink-text">99%</h3>
                         <p>Valid</p>
                     </div>
                 </div>

@@ -61,8 +61,8 @@ const [menuOpen, setMenuOpen] = useState(false);
       </nav>
     
     <div className="header-buttons">
-      <button class="btn-outline" onClick={() => navigate("/login")}>Get Demo</button>
-      <button class="btn-primary">Get Started</button>
+      <button className="btn-outline" onClick={() => navigate("/login")}>Get Demo</button>
+      <button className="btn-primary">Get Started</button>
     </div>
 
   </div>
